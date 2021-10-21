@@ -1,0 +1,5 @@
+<mat-form-field appearance="outline" class="w-100">
+    <mat-label>{{label}}</mat-label>
+    <input matInput placeholder="placeHolder" [formControl]="control" type="{{isPassword? 'password':'text'}}">
+    <mat-error *ngIf="control.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>

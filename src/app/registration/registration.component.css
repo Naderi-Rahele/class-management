@@ -1,0 +1,12 @@
+mat-card>img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+mat-card {
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+}

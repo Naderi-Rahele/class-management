@@ -1,0 +1,18 @@
+<mat-card fxLayout="row" fxLayoutGap="20px">
+    <img fxFlex src='./../../assets/images/register.jpg'>
+    <div fxFlex>
+        <app-form-input [control]="emailControl" placeHolder="Email" label="Email"></app-form-input>
+        <app-form-input [control]="passwordControl" placeHolder="Password" label="Password" [isPassword]="true">
+        </app-form-input>
+        <app-form-input [control]="confirmPasswordControl" placeHolder="ConfirmPassword" label="ConfirmPassword"
+            [isPassword]="true">
+        </app-form-input>
+        <app-form-select class="w-100" label="Choose" [optionList]="educationList"></app-form-select>
+        <app-form-check-box class="w-100" label="I Agree" [checked]="true"></app-form-check-box>
+        <app-form-radio-button style="margin-top: 10px;" class="w-100" [optionList]='genderList' label="Gender">
+        </app-form-radio-button>
+        <br />
+        <button class="w-100" mat-flat-button color="primary">Create an account</button>
+        <button class="w-100" mat-flat-button color="accent">Sign up with Google</button>
+    </div>
+</mat-card>
