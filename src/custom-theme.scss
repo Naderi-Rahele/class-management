@@ -1,10 +1,14 @@
 @use '~@angular/material' as mat;
 @include mat.core();
 
-@mixin customClasses($primary, $accent) {
+@mixin customClasses($primary, $accent,$warn) {
     .bg-accent {
         background-color: mat.get-color-from-palette($accent, default) !important;
         color: mat.get-color-from-palette($accent, default-contrast) !important;
+    }
+    .bg-warn {
+        background-color: mat.get-color-from-palette($warn, default) !important;
+        color: mat.get-color-from-palette($warn, default-contrast) !important;
     }
 }
 
@@ -20,4 +24,4 @@ $theme:mat.define-light-theme((
 ));
 
 @include mat.all-component-themes($theme);
-@include customClasses($color-primary,$color-accent);
+@include customClasses($color-primary,$color-accent,$color-warn);
