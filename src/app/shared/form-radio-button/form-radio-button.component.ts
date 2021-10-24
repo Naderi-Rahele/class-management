@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { FormRadioOption } from './extra';
 
 @Component({
@@ -9,6 +10,7 @@ import { FormRadioOption } from './extra';
 export class FormRadioButtonComponent implements OnInit {
   @Input() optionList: FormRadioOption[] = [];
   @Input() label?: string;
+  @Input() control = new FormControl();
 
   constructor() { }
 

@@ -8,7 +8,8 @@ import { FormSelectComponent } from './form-select/form-select.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormCheckBoxComponent } from './form-check-box/form-check-box.component';
 import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.component';
-import { ContainerComponent } from './container/container.component'
+import { ContainerComponent } from './container/container.component';
+import { DatePipe } from './date.pipe'
 
 
 
@@ -18,7 +19,8 @@ import { ContainerComponent } from './container/container.component'
     FormSelectComponent,
     FormCheckBoxComponent,
     FormRadioButtonComponent,
-    ContainerComponent
+    ContainerComponent,
+    DatePipe
   ],
   imports: [
     CommonModule,

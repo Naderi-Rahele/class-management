@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-check-box',
@@ -7,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FormCheckBoxComponent implements OnInit {
   @Input() label?: string;
-  @Input() checked?: boolean
+  @Input() checked?: boolean;
+  @Input() control = new FormControl();
   constructor() { }
 
   ngOnInit(): void {

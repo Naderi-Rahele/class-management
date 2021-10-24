@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { FormSelectOption } from './extra';
 
 @Component({
@@ -9,6 +10,8 @@ import { FormSelectOption } from './extra';
 export class FormSelectComponent implements OnInit {
   @Input() optionList: FormSelectOption[] = [];
   @Input() label?: string;
+  @Input() control = new FormControl();
+
   constructor() { }
 
   ngOnInit(): void {
