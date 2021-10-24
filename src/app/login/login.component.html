@@ -1,0 +1,12 @@
+<app-container>
+    <mat-card fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-md="row wrap">
+        <div>
+            <app-form-input [control]="emailControl" placeHolder="Email" label="Email"></app-form-input>
+            <app-form-input [control]="passwordControl" placeHolder="Password" label="Password" [isPassword]="true">
+            </app-form-input>
+            <br />
+            <button class="w-100" mat-flat-button color="primary" [disabled]="form.invalid" (click)="login()">Login
+            </button>
+        </div>
+    </mat-card>
+</app-container>
