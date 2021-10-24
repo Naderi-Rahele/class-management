@@ -9,12 +9,16 @@
             <app-form-input [control]="confirmPasswordControl" placeHolder="ConfirmPassword" label="ConfirmPassword"
                 [isPassword]="true">
             </app-form-input>
-            <app-form-select class="w-100" label="Choose" [optionList]="educationList"></app-form-select>
-            <app-form-check-box class="w-100" label="I Agree" [checked]="true"></app-form-check-box>
-            <app-form-radio-button style="margin-top: 10px;" class="w-100" [optionList]='genderList' label="Gender">
+            <app-form-select class="w-100" label="Choose" [optionList]="educationList" [control]="educationControl">
+            </app-form-select>
+            <app-form-check-box class="w-100" label="I Agree" [control]="confrimAgreementControl" [checked]="true">
+            </app-form-check-box>
+            <app-form-radio-button style="margin-top: 10px;" class="w-100" [optionList]='genderList' label="Gender"
+                [control]="genderControl">
             </app-form-radio-button>
             <br />
-            <button class="w-100" mat-flat-button color="primary">Create an account</button>
+            <button class="w-100" mat-flat-button color="primary" [disabled]="form.invalid"
+                (click)="addRegistration()">Create an account</button>
             <button class="w-100" mat-flat-button color="accent">Sign up with Google</button>
         </div>
     </mat-card>

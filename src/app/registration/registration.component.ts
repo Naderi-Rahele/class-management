@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormRadioOption } from '../shared/form-radio-button/extra';
 import { FormSelectOption } from '../shared/form-select/extra';
+import { RegistrationModel } from '../models/registration-model';
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -12,8 +16,9 @@ export class RegistrationComponent implements OnInit {
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   passwordControl = new FormControl('', [Validators.required, Validators.minLength(6)]);
   confirmPasswordControl = new FormControl('', [Validators.required, Validators.minLength(6)]);
-  confrimAgreementControl = new FormControl('', [Validators.required]);
-  educationControl = new FormControl('', [Validators.required]);
+  confrimAgreementControl = new FormControl('', [Validators.requiredTrue]);
+  educationControl = new FormControl('');
+  genderControl = new FormControl('');
 
   form = new FormGroup({
     email: this.emailControl,
@@ -33,7 +38,25 @@ export class RegistrationComponent implements OnInit {
     new FormRadioOption(2, 'Female'),
   ]
 
-  constructor() {
+  constructor(public service: UserService,
+    private toastService: MatSnackBar,
+    private router: Router) {
+
+  }
+
+  addRegistration() {
+    if (this.form.invalid) {
+      return;
+    }
+    var model = new RegistrationModel(this.emailControl.value, this.passwordControl.value, this.educationControl.value, this.genderControl.value);
+    this.service.add(model).subscribe(res => {
+      this.toastService.open('Registration added successfuly', '', {
+        duration: 2000,
+        panelClass: ['bg-accent'],
+      });
+      this.router.navigate(['/']);
+      return;
+    });
 
   }
 
