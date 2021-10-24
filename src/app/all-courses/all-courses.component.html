@@ -1,1 +1,29 @@
-<p>all-courses works!</p>
+<app-container title="All Courses">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="item" *ngFor="let item of allCourses" fxFlex.lt-md="100%" fxFlex.gt-md="33%">
+            <mat-card>
+                <div class="image-item rounded"></div>
+                <div class="teacher-contaner" fxLayout="row" fxLayoutAlign="center center">
+                    <div class="image-avator"></div>
+                    <span class="teacher">{{item.teacher}}</span>
+                    <div fxFlex></div>
+                    <div>
+                        <mat-chip-list>
+                            <mat-chip color="accent" selected class="course-name">
+                                {{item.name}}
+                            </mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
+                <div class="description">{{item.description}}</div>
+                <div class="rounded bg-accent" fxLayout="row" fxLayoutAlign="center center">
+                    <div class="price">${{item.price}}</div>
+                    <div fxFlex></div>
+                    <div>{{item.startDate|date}}</div>
+                </div>
+                <button mat-raised-button class="select-button" color="primary"
+                    (click)="selectCourse(item.id)">Select</button>
+            </mat-card>
+        </div>
+    </div>
+</app-container>

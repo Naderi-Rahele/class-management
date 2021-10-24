@@ -1,0 +1,55 @@
+.item {
+    padding: 10px;
+}
+
+.image-item {
+    background-image: url('./../../assets/images/home.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100px;
+}
+
+.rounded {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.price {
+    color: green !important;
+}
+
+.description {
+    height: 50px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.select-button {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.image-avator {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.teacher {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.teacher-contaner {
+    padding: 5px 0px;
+}
+
+.course-name {
+    font-size: 10px;
+}
