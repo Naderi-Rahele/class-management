@@ -1,4 +1,4 @@
-mat-card>img {
+.image>img {
   border-radius: 10px;
   width: 100%;
 }
@@ -9,4 +9,8 @@ mat-card {
 
 button {
   margin-top: 10px;
+}
+
+.image {
+  padding: 20px;
 }

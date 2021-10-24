@@ -1,0 +1,19 @@
+.header {
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.footer {
+    height: 200px;
+    margin-top: 50px;
+}

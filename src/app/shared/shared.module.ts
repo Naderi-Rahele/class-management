@@ -7,7 +7,8 @@ import { MaterialModule } from '../material.module';
 import { FormSelectComponent } from './form-select/form-select.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormCheckBoxComponent } from './form-check-box/form-check-box.component';
-import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.component'
+import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.component';
+import { ContainerComponent } from './container/container.component'
 
 
 
@@ -16,7 +17,8 @@ import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.
     FormInputComponent,
     FormSelectComponent,
     FormCheckBoxComponent,
-    FormRadioButtonComponent
+    FormRadioButtonComponent,
+    ContainerComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   exports: [
     MaterialModule,
@@ -34,7 +37,8 @@ import { FormRadioButtonComponent } from './form-radio-button/form-radio-button.
     BrowserAnimationsModule,
     FormSelectComponent,
     FormCheckBoxComponent,
-    FormRadioButtonComponent
+    FormRadioButtonComponent,
+    ContainerComponent
   ],
 })
 export class SharedModule { }
