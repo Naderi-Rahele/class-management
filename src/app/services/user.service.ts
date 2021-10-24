@@ -44,5 +44,11 @@ export class UserService {
         return of({});
     }
 
+    getUserCourse() {
+        const courseIdList = InMemoryDB.USERS_COURSES.filter(c => c.email === InMemoryDB.CURRENT_USER).map(x => x.courseId);
+        return InMemoryDB.COURSES.filter(c => courseIdList.includes(c.id));
+
+    }
+
 }
 
