@@ -3,10 +3,11 @@
     <mat-card class="bg-accent container" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"
         fxFlex.gt-md="50%">
         <img class="logo" src='./../assets/images/logo.png'>
-        <button mat-flat-button color="accent">All Courses</button>
+        <button mat-flat-button color="accent" (click)='allCourses()'>All Courses</button>
         <div fxFlex></div>
         <button mat-flat-button color="accent" (click)="login()" *ngIf="!isLoggedIn">Sign In</button>
         <button mat-flat-button (click)="register()" *ngIf="!isLoggedIn">Sign Up</button>
+        <button mat-flat-button (click)="getUserCourse()" *ngIf="isLoggedIn">My Course</button>
         <button mat-flat-button (click)="logOut()" *ngIf="isLoggedIn">Sign Out</button>
     </mat-card>
 </div>

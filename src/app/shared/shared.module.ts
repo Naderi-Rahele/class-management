@@ -27,7 +27,6 @@ import { DatePipe } from './date.pipe'
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     FlexLayoutModule
   ],
   exports: [
@@ -36,7 +35,6 @@ import { DatePipe } from './date.pipe'
     FormsModule,
     ReactiveFormsModule,
     FormInputComponent,
-    BrowserAnimationsModule,
     FormSelectComponent,
     FormCheckBoxComponent,
     FormRadioButtonComponent,

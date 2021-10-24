@@ -28,7 +28,15 @@ export class AppComponent {
     });
   }
 
+  getUserCourse() {
+    this.router.navigate(['/user/user-courses']);
+  }
+
   register() {
     this.router.navigate(['/register'])
+  }
+
+  allCourses() {
+    this.router.navigate(['/all-courses']);
   }
 }
