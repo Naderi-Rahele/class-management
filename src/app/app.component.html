@@ -5,8 +5,9 @@
         <img class="logo" src='./../assets/images/logo.png'>
         <button mat-flat-button color="accent">All Courses</button>
         <div fxFlex></div>
-        <button mat-flat-button color="accent">Sign In</button>
-        <button mat-flat-button>Sign Up</button>
+        <button mat-flat-button color="accent" (click)="login()" *ngIf="!isLoggedIn">Sign In</button>
+        <button mat-flat-button (click)="register()" *ngIf="!isLoggedIn">Sign Up</button>
+        <button mat-flat-button (click)="logOut()" *ngIf="isLoggedIn">Sign Out</button>
     </mat-card>
 </div>
 <router-outlet></router-outlet>
