@@ -1,4 +1,3 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
@@ -9,8 +8,7 @@ import { InMemoryDB, User, UserCourse } from './in-memory-db';
     providedIn: 'root'
 })
 export class UserService {
-    constructor(public http: HttpClient,
-        private router: Router
+    constructor(private router: Router
     ) {
     }
 
