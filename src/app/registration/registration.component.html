@@ -1,7 +1,7 @@
 <app-container title="Registration Form">
     <mat-card fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-md="row wrap">
         <div class="image" fxFlex="50%"><img fxFlex src='./../../assets/images/register.jpg'></div>
-        <div fxFlex="50%">
+        <div fxFlex="50%" fxFlex.lt-md="100%">
             <h3>Registration Now</h3>
             <app-form-input [control]="emailControl" placeHolder="Email" label="Email"></app-form-input>
             <app-form-input [control]="passwordControl" placeHolder="Password" label="Password" [isPassword]="true">
