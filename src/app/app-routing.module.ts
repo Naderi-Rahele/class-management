@@ -1,4 +1,3 @@
-import { Quote } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
